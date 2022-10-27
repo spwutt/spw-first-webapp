@@ -1,0 +1,69 @@
+﻿/*@media (max-width: 390px) {
+    hr {
+        margin: 1.75rem auto !important;
+    }
+    .info-p {
+        .logo {
+            margin-top: 2rem !important;
+            height: 50px !important;
+        }
+
+        .main-title {
+            margin-top: 2rem !important;
+        }
+
+        .sec-title {
+            margin-top: 1.5rem !important;
+        }
+    }
+
+    .frm-p {
+        .title, .monthlymoney, .forecast, .savingplan {
+            margin: .75rem auto !important;
+        }
+
+        .savingplan {
+            padding: .5rem !important;
+        }
+    }
+
+    .success-p {
+    }
+}
+
+@media (max-width: 500px) {
+    .info-p {
+        .sec-title {
+            margin-top: 1.5rem !important;
+
+            .details {
+                width: 60% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {    
+    .frm-p {
+        .percent {
+            flex-direction: column !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+
+            .base, .plus, .addno {
+                padding: .5rem 0 !important;
+            }
+
+            .addon {
+                .desc {
+                    align-self: center !important;
+                }
+            }
+
+            input[type=range] {
+                width: 100% !important;
+            }
+        }
+    }
+}
+*/

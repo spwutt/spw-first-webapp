@@ -1,26 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using spw_first_webapp.Model;
 using spw_first_webapp.Models;
+using spw_first_webapp.Services;
 using System.Diagnostics;
 
 namespace spw_first_webapp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IProfileService _profileservice;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IProfileService profileservice)
         {
-            _logger = logger;
+            _profileservice = profileservice;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            try
+            {
+                var _myprofile = await _profileservice.GetProfile();
+                return View(model: JsonConvert.SerializeObject(_myprofile));
+            }
+            catch
+            {
+                return View(model: $"Sorry, ");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
